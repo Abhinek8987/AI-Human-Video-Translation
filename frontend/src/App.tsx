@@ -958,7 +958,64 @@ export default function App() {
             </div>
           </div>
           
-          © {new Date().getFullYear()} Human Video Translator. All rights reserved. | College Major Project
+          <div
+  className={`border-t mt-8 pt-8 text-center ${
+    isDarkMode ? 'border-gray-700' : 'border-gray-200'
+  }`}
+>
+  {/* Developed by */}
+  <p className="mb-4 text-lg sm:text-xl font-extrabold tracking-widest">
+    <span className={isDarkMode ? 'text-gray-300' : 'text-gray-600'}>
+      Developed by{' '}
+    </span>
+
+    {/* Name animation */}
+    <span
+      className="
+        inline-flex overflow-hidden whitespace-nowrap
+        border-r-2 border-purple-500
+        animate-typing-name
+        align-middle
+      "
+      style={{ width: '14ch' }}
+    >
+      <span className="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+        Abhinek
+      </span>
+      <span className="ml-1 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+        Pandey
+      </span>
+    </span>
+  </p>
+
+  {/* Copyright */}
+  <p
+    className={`px-4 py-2 inline-block rounded-full text-sm font-semibold ${
+      isDarkMode
+        ? 'bg-gray-800 text-gray-300'
+        : 'bg-indigo-50 text-indigo-700'
+    }`}
+  >
+    © {new Date().getFullYear()} Human Video Translator. All rights reserved.
+  </p>
+
+  {/* Animation */}
+  <style>{`
+    @keyframes typingName {
+      from { width: 0 }
+      to { width: 14ch }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    .animate-typing-name {
+      animation:
+        typingName 3s steps(14) infinite alternate,
+        blink 1s step-end infinite;
+    }
+  `}</style>
+</div>
+
         </div>
       </footer>
 
