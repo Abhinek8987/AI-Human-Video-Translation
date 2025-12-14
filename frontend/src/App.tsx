@@ -964,20 +964,15 @@ export default function App() {
   }`}
 >
   {/* Developed by */}
-  <p className="mb-4 text-lg sm:text-xl font-extrabold tracking-widest">
+  <p className="mb-4 text-base sm:text-xl font-extrabold whitespace-nowrap">
     <span className={isDarkMode ? 'text-gray-300' : 'text-gray-600'}>
       Developed by{' '}
     </span>
 
-    {/* Name animation */}
+    {/* Typing Name */}
     <span
-      className="
-        inline-flex overflow-hidden whitespace-nowrap
-        border-r-2 border-purple-500
-        animate-typing-name
-        align-middle
-      "
-      style={{ width: '14ch' }}
+      className="inline-flex overflow-hidden whitespace-nowrap border-r-2 border-purple-500 animate-typing-name align-middle"
+      style={{ width: '15ch' }}  
     >
       <span className="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
         Abhinek
@@ -999,18 +994,20 @@ export default function App() {
     © {new Date().getFullYear()} Human Video Translator. All rights reserved.
   </p>
 
-  {/* Animation */}
+  {/* Animations */}
   <style>{`
     @keyframes typingName {
       from { width: 0 }
-      to { width: 14ch }
+      to { width: 15ch }
     }
+
     @keyframes blink {
       50% { border-color: transparent }
     }
+
     .animate-typing-name {
       animation:
-        typingName 3s steps(14) infinite alternate,
+        typingName 3s steps(15, end) infinite alternate,
         blink 1s step-end infinite;
     }
   `}</style>
