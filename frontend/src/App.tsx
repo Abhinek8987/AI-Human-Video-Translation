@@ -958,15 +958,7 @@ export default function App() {
             </div>
           </div>
           
-          <div className={`border-t mt-8 pt-8 text-center ${
-            isDarkMode ? 'border-gray-700' : 'border-gray-200'
-          }`}>
-            <p className={`text-sm ${
-              isDarkMode ? 'text-gray-400' : 'text-gray-500'
-            }`}>
-              © {new Date().getFullYear()} Human Video Translator. All rights reserved. | College Major Project
-            </p>
-          </div>
+          © {new Date().getFullYear()} Human Video Translator. All rights reserved. | College Major Project
         </div>
       </footer>
 
