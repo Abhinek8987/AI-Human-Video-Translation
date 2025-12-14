@@ -26,6 +26,16 @@ backend/storage/
 .vscode/
 .idea/
 
+# Duplicate folder
+human-video-translator/
+
+# Models to avoid large files
+models/
+**/models/
+*.pth
+*.bin
+*.onnx
+
 # OS
 .DS_Store
 Thumbs.db
